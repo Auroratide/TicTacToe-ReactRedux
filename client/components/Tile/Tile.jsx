@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Tile = ( {
   mark,
   onSelect
-} ) => <div className='tile'>
+} ) => <div className='tile' onClick={onSelect}>
   {mark}
 </div>;
 
