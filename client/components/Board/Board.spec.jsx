@@ -5,7 +5,14 @@ import { shallow } from 'enzyme';
 import Board from './Board';
 
 describe('<Board />', () => {
-  const board = () => shallow(<Board />);
+  let props;
+  const board = () => shallow(<Board {...props} />);
+
+  beforeEach(() => {
+    props = {
+      board: ['', '', '', '', '', '', '', '', '']
+    };
+  });
 
   it('should render', () => {
     expect(board()).to.have.length(1);
