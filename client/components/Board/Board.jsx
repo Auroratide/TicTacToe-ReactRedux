@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Tile from '../Tile';
+import './style';
 
 const Board = ( {
   board
