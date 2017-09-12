@@ -5,7 +5,7 @@ import { getTile } from '../../api/tictactoe';
 
 const getGame = state => state.game;
 
-function* playerChooseTile(action) {
+export function* playerChooseTile(action) {
   yield put(chooseTile(action.tile));
   const game = yield select(getGame);
   const tile = yield call(getTile, game.turn, game.board);
