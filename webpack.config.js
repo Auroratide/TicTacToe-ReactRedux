@@ -3,7 +3,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   name: 'client',
-  entry: path.join(__dirname, 'client', 'client.jsx'),
+  entry: ['babel-polyfill', path.join(__dirname, 'client', 'client.jsx')],
   devtool: 'eval-source-map',
   output: {
     filename: 'client.js',

@@ -11,7 +11,7 @@
     "build": "webpack",
     "build:watch": "webpack --watch",
     "clean": "rm -rf public/client.js",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ignore-styles './{server,client}/**/*.spec.{js,jsx}'"
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ignore-styles --require babel-polyfill './{server,client}/**/*.spec.{js,jsx}'"
   },
   "author": "Auroratide",
   "license": "ISC",
@@ -22,11 +22,13 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",

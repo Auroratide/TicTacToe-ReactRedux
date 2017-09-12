@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import { chooseTile } from '../../reducers/game';
+import { playerChooseTile } from '../../sagas/game';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onSelect: () => dispatch(chooseTile(ownProps.tileNumber))
+    onSelect: () => dispatch(playerChooseTile(ownProps.tileNumber))
   };
 };
 
