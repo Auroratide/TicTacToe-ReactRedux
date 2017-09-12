@@ -16,6 +16,7 @@
   "author": "Auroratide",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "prop-types": "^15.5.10",
