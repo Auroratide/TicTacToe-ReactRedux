@@ -1,5 +1,4 @@
-import * as Actions from './actions';
-import { chooseTile } from '../../reducers/game';
+import { PLAYER_CHOOSE_TILE, chooseTile } from '../../actions/game';
 import { call, put, takeEvery, select } from 'redux-saga/effects';
 import { getTile } from '../../api/tictactoe';
 
@@ -13,5 +12,5 @@ export function* playerChooseTile(action) {
 }
 
 export default function* game() {
-  yield takeEvery(Actions.PLAYER_CHOOSE_TILE, playerChooseTile);
+  yield takeEvery(PLAYER_CHOOSE_TILE, playerChooseTile);
 }

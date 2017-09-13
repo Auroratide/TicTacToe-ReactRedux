@@ -1,8 +1,10 @@
 import { expect } from 'chai';
 import { call, put, takeEvery, select } from 'redux-saga/effects';
 import { getTile } from '../../api/tictactoe';
-import { chooseTile } from '../../reducers/game';
-import { playerChooseTile } from './creators';
+import {
+  chooseTile,
+  playerChooseTile
+} from '../../actions/game';
 import { playerChooseTile as playerChooseTileSaga } from './game';
 
 describe('game sagas', () => {

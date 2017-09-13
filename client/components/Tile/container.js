@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { playerChooseTile } from '../../sagas/game';
+import { playerChooseTile } from '../../actions/game';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {

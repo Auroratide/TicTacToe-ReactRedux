@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import game from './game';
-import { chooseTile } from './creators';
+import { chooseTile } from '../../actions/game';
 
 describe('game reducer', () => {
   let state;
