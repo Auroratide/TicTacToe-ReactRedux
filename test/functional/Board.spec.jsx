@@ -19,7 +19,7 @@ describe('<Board /> Functional', () => {
     const tiles = board.find('.tile');
     tiles.at(1).simulate('click');
 
-    eventually(() => {
+    return eventually(() => {
       expect(tiles.at(1).text()).to.contain('x');
       expect(tiles.at(0).text()).to.contain('o');
     });
