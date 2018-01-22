@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   const board = req.query.board.split(',');
   const turn = req.query.turn;
 
-  const selectedTile = board.indexOf('');
+  const selectedTile = board.lastIndexOf('');
 
   return res.status(200).json( {
     tile: selectedTile
